@@ -7,6 +7,7 @@ import {
   Link //相当于a
 } from "react-router-dom";
 import SiderOne from './pages/siderOne'
+import SiderTwo from './pages/siderTwo'
 
 
 // export default function App(){
@@ -53,7 +54,7 @@ function SilderThree() {
 
 
 export default class App extends Component {
-  
+
   constructor(props) {
     super(props)
     this.state = {
@@ -88,9 +89,9 @@ export default class App extends Component {
           <div class="header">头部</div>
           <div class="content-box">
             <div class="sider">
-              <Link to="/silderOne">侧边栏1</Link>
-              <Link to="/silderTwo">侧边栏2</Link>
-              <Link to="/silderThree">侧边栏3</Link>
+              <Link class="link" to="/silderOne" >侧边栏1</Link>
+              <Link class="link" to="/silderTwo" >侧边栏2</Link>
+              <Link class="link" to="/silderThree" >侧边栏3</Link>
             </div>
             <div class="content">
               <Switch>
@@ -100,7 +101,7 @@ export default class App extends Component {
                   <SiderOne name={this.state.sideName1} nameCallBack={this.changeName}/>
                 </Route>
                 <Route path="/silderTwo">
-                  <SilderTwo name="侧边栏2"/>
+                  <SiderTwo name="侧边栏2"/>
                 </Route>
                 <Route path="/silderThree">
                   <SilderThree name="侧边栏3"/>
